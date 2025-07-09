@@ -11,10 +11,12 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-import java.util.*;
-
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        // Optimal Approach : Instead of using external data structure
+        //                    Use Dummy Node concept✅✅✅
+
+        // Edge Cases: 
         if (l1 == null)
             return l2;
         if (l2 == null)
@@ -22,10 +24,10 @@ class Solution {
 
         ListNode temp1 = l1;
         ListNode temp2 = l2;
-        List<Integer> res = new ArrayList<>();
+        ListNode dummyNode = new ListNode(-1); // create a dummyNode
+        ListNode curr = dummyNode; // also take another pointer, initially pointing to dummyNode
         boolean flag = false;
         int carry = 0;
-
         while (temp1 != null || temp2 != null || carry != 0) {
             int v1 = 0;
             int v2 = 0;
@@ -36,12 +38,16 @@ class Solution {
                 v2 = temp2.val;
             value = v1 + v2 + carry;
             if (value <= 9) {
-                res.add(value);
+                ListNode newNode = new ListNode(value); // create a new node with that value
+                curr.next = newNode; // and connect the link b/w dummyNode.next and our first node with sum of digits
+                curr = newNode; // make sure you move curr as well for next link to connect
                 carry = 0;
                 flag = false;
             } else {
                 value = value % 10;
-                res.add(value);
+                ListNode newNode = new ListNode(value); // create a new node of that digits sum
+                curr.next = newNode; // similarly make the link
+                curr = newNode; // and move curr as well for future nodes to connect
                 carry = 1;
                 flag = true;
             }
@@ -50,19 +56,6 @@ class Solution {
             if (temp2 != null)
                 temp2 = temp2.next;
         }
-
-        ListNode head = convertArr2LL(res);
-        return head;
-    }
-
-    public ListNode convertArr2LL(List<Integer> res) {
-        ListNode head = new ListNode(res.get(0));
-        ListNode mover = head;
-        for (int i = 1; i < res.size(); i++) {
-            ListNode temp = new ListNode(res.get(i));
-            mover.next = temp;
-            mover = temp;
-        }
-        return head;
+        return dummyNode.next; // just return the head => which is dummyNode.next
     }
 }
