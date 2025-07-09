@@ -26,7 +26,6 @@ class Solution {
         ListNode temp2 = l2;
         ListNode dummyNode = new ListNode(-1); // create a dummyNode
         ListNode curr = dummyNode; // also take another pointer, initially pointing to dummyNode
-        boolean flag = false;
         int carry = 0;
         while (temp1 != null || temp2 != null || carry != 0) {
             int v1 = 0;
@@ -42,14 +41,12 @@ class Solution {
                 curr.next = newNode; // and connect the link b/w dummyNode.next and our first node with sum of digits
                 curr = newNode; // make sure you move curr as well for next link to connect
                 carry = 0;
-                flag = false;
             } else {
                 value = value % 10;
                 ListNode newNode = new ListNode(value); // create a new node of that digits sum
                 curr.next = newNode; // similarly make the link
                 curr = newNode; // and move curr as well for future nodes to connect
                 carry = 1;
-                flag = true;
             }
             if (temp1 != null)
                 temp1 = temp1.next;
