@@ -1,0 +1,78 @@
+/*Definition of singly linked list:
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode() {
+        val = 0;
+        next = null;
+    }
+
+    ListNode(int val1) {
+        val = val1;
+        next = null;
+    }
+
+    ListNode(int val1, ListNode next1) {
+        val = val1;
+        next = next1;
+    }
+}
+ */
+
+class Solution {
+    public ListNode addOne(ListNode head) {
+        // Better Approach : ReverseLL + Traverse + ReverseLL
+
+        head = reverseLL(head);
+        ListNode temp = head;
+        int carry = 1;
+        
+        while(temp != null){
+            // replace the data in temp node with " Sum "
+            temp.val += carry;
+            
+            // Check to see if that sum is exceeding >> 10
+            // Assume we did not got any carry
+            if(temp.val <= 9){
+                // means, "Yes" carry is NOT produced
+                carry = 0;
+                break;
+            }
+
+            // Otheriwse, Assume this case => carry produced 
+            else{
+                // carry is produced store that carry in a newNode
+                temp.val = temp.val % 10;
+                carry = 1;
+            }
+
+            // Iresspective of that keep moving on temp !!
+            temp = temp.next;
+        }
+
+        // What if we added n numbers, but got n+1 numbers (Special case)
+        if(carry == 1){
+            ListNode newNode = new ListNode(1);
+            // also reverse back the LL 
+            head = reverseLL(head);
+            newNode.next = head;
+            return newNode;
+        }
+
+        // otherwise => No carry is produced at last 
+        head = reverseLL(head);
+        return head;
+    }
+    public ListNode reverseLL(ListNode head){
+        ListNode temp = head;
+        ListNode prev = null;
+        while(temp != null){
+            ListNode front = temp.next;
+            temp.next = prev;
+            prev = temp;
+            temp = front;
+        }
+        return prev;
+    }
+}
