@@ -1,26 +1,105 @@
-# 💻 My Java DSA Journey
+# 💻 DSA Sprint – Java-Only
 
-📍 **Purpose:**  
-This repository is my personal space to track my progress in solving Data Structures & Algorithms problems using **Java**.
-
-🛠️ I started with very basic logic and slowly built up consistency and confidence.  
-Now I’m solving problems regularly — not for perfection, but for progress.
-
-⚡ No pressure. No race. Just me vs. me — showing up, learning, and getting better every day.
+Welcome to my personal **DSA Sprint** — where I tackle **Data Structures & Algorithm problems using Java**, one problem at a time.  
+This repository reflects my consistency, learning mindset, and hands-on problem-solving journey.
 
 ---
 
-## ✨ What’s Inside
+## 🚀 Why This Exists
 
-🗂️ Organized by topic (Arrays, Strings, Trees, DP, etc.)  
-📌 Clean code with logic explained in comments  
-📈 A trail of my problem-solving journey — one commit at a time
+Solving DSA is not about cramming — it’s about:
+- 💡 Understanding patterns  
+- 🧠 Strengthening logic  
+- ⚙️ Improving problem-solving speed  
+- 🎯 Staying consistent
+
+This repo is my way of showing up daily, pushing myself, and tracking growth — without shortcuts.
 
 ---
 
-## 🧠 Why I’m Doing This
+## 📁 Folder Structure
 
-Sometimes, it’s easy to forget how far you’ve come.  
-This repo is a reminder to myself — that I’ve grown, I’m still growing, and I’ll keep showing up.
+```
+DSA Sprint – Java-Only/
+├── Arrays/
+├── Strings/
+├── LinkedList/
+├── Stack/
+├── Queue/
+├── Trees/
+├── Recursion/
+├── DynamicProgramming/
+└── ...
+```
 
-👀 If future me is reading this... keep going. You’ve got this. 🔥
+---
+
+Each folder contains:
+- 🧩 Java solutions
+- 🗒️ Clean code with inline explanations
+- 📌 Focus on logic, not just syntax
+
+---
+
+## 🛠️ Language & Tools
+
+| Language | Editor | Platform |
+|----------|--------|----------|
+| Java ☕ | VSCode / IntelliJ 💻 | Local + GitHub 🔗 |
+
+---
+
+## 🧠 What I'm Practicing
+
+- ✅ Arrays & Strings  
+- ✅ Linked Lists & Pointers  
+- ✅ Recursion & Backtracking  
+- ✅ Trees & Binary Search Trees  
+- ✅ Stack & Queue  
+- ✅ Sliding Window, Two Pointers  
+- ✅ Dynamic Programming  
+- ✅ Bit Manipulation  
+- ✅ Sorting & Searching Techniques
+
+---
+
+## 📈 Progress Mindset
+
+> *"It’s not about being the best. It’s about being better than I was yesterday."*
+
+No pressure. No race.  
+Just me vs. me — showing up, solving, and improving daily.
+
+---
+
+## 🌟 Highlights
+
+- 🧠 Pure Java DSA – No framework shortcuts  
+- 🔍 Readable code with logical breakdowns  
+- 🔁 Revisions & pattern recognition  
+- 📂 Organized by topic, not just date  
+- 🧪 Real grind, not tutorial fluff
+
+---
+
+## 👨‍💻 Author
+
+**Likhith Edupuganti**
+
+📧 [Email](mailto:likhithedupuganti@srmap.edu.in)  
+🔗 [LinkedIn](https://www.linkedin.com/in/likhithedupuganti)  
+🌐 [Portfolio](https://portfoliobylikhith.netlify.app/)
+
+---
+
+## ⭐️ Support
+
+If you find this repo helpful or motivating:
+
+```bash
+🌟 Star it
+🍴 Fork it
+📢 Share it
+```
+
+# Let’s grow together. 💪
