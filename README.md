@@ -1,4 +1,4 @@
-# 💻 DSA Sprint – Java-Only
+# 🗿🔥 DSA Sprint – Java-Only
 
 Welcome to my personal **DSA Sprint** — where I tackle **Data Structures & Algorithm problems using Java**, one problem at a time.  
 This repository reflects my consistency, learning mindset, and hands-on problem-solving journey.
