@@ -30,28 +30,37 @@ class Solution {
         // Step3 : Now multiply 5^even * 4^odd under modulo✅
 
         long mod = 1_000_000_007;
+
         long evenCnt = (n + 1) / 2;
         long oddCnt = n / 2;
 
-        long evenPow = modPow(5, evenCnt, mod); // 5^evenCnt
-        long oddPow = modPow(4, oddCnt, mod);   // 4^oddCnt
+        long evenPow = myPow(5, evenCnt, mod);
+        long oddPow = myPow(4, oddCnt, mod);
 
         long result = (evenPow * oddPow) % mod;
         return (int) result;
     }
 
-    // Helper Function: Modular Exponentiation✅
-    public long modPow(long base, long exp, long mod) {
-        long res = 1;
-        base %= mod;
+    public long myPow(long x, long n, long mod) {
+        // Most Optimal Iterative Approach : 
 
-        while (exp > 0) {
-            if (exp % 2 == 1) {
-                res = (res * base) % mod;
+        // BaseCase
+        if (x == 1 || n == 0)
+            return 1;
+
+        // Iterative Logic
+        long ans = 1;
+        x = x % mod;
+
+        while (n > 0) {
+            if (n % 2 == 1) {
+                ans = (ans * x) % mod;
+                n = n - 1;
+            } else {
+                x = (x * x) % mod;
+                n = n / 2;
             }
-            base = (base * base) % mod;
-            exp = exp / 2;
         }
-        return res;
+        return ans;
     }
 }
