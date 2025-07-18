@@ -19,19 +19,27 @@
  * Output: [[],[0]]
  */
 
-import java.util.*;
-
-public class LC78_Subsets {
-
+class Solution {
     public List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> ans = new ArrayList<>(); // List to store all subsets
-        List<Integer> current = new ArrayList<>();   // Temporary list to store the current subset
-        backtrack(0, nums.length, nums, current, ans); // Start the recursive process
-        return ans; // Return the list of all subsets
+        // Most Optimal Recursive Approach : Take or Not Take it✅✅✅
+
+        int n = nums.length;
+        // To store the final possible list of subsequences
+        List<List<Integer>> ans = new ArrayList<>();
+        // To store the intermediate possible list of subsequences
+        List<Integer> current = new ArrayList<>();
+        // Call the Recursive function 
+        backtrack(0, ans, current, nums, n);
+        return ans;
     }
 
-    // Helper function to generate all subsets
-    private void backtrack(int index, int n, int[] nums, List<Integer> current, List<List<Integer>> ans) {
+    // Helper function that recursively calls at each step and finally returns the list of possible subsequences.
+    public void backtrack(int index, List<List<Integer>> ans, List<Integer> current, int[] nums, int n) {
+        // Point to remember : 
+        // ****** 1. Take (OR) 2. Dont Take *******
+
+        // NOTE: For every recursive skeleton Base Case is the first to write
+
         // Base case: if the index reaches the length of the array,
         // add the current subset to the answer list
         if (index == n) {
@@ -39,22 +47,13 @@ public class LC78_Subsets {
             return;
         }
 
-        // Recursive case: Exclude the current element and move to the next element
-        backtrack(index + 1, n, nums, current, ans);
+        // DON'T TAKE:
+        backtrack(index + 1, ans, current, nums, n);
 
-        // Include the current element in the subset and move to the next element
+        // TAKE:
         current.add(nums[index]);
-        backtrack(index + 1, n, nums, current, ans);
-
-        // Backtrack: remove the last added element to explore other subsets
+        backtrack(index + 1, ans, current, nums, n);
+        // Edge case: 
         current.remove(current.size() - 1);
-    }
-
-    // For local testing
-    public static void main(String[] args) {
-        LC78_Subsets solution = new LC78_Subsets();
-        int[] nums = {1, 2, 3};
-        List<List<Integer>> result = solution.subsets(nums);
-        System.out.println(result);
     }
 }
