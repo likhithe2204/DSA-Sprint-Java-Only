@@ -64,5 +64,6 @@ class Solution {
         // Assume Take :
         sum += nums[index]; // keep a track of sum
         backtrack(index + 1, count, sum, nums, n, k);
+        sum -= nums[index]; // Note * After backtrack also remove the last element added from sum 
     }
 }
