@@ -55,7 +55,7 @@ class Solution {
               return true; // ✅ Stop recursion once one valid subsequence is found
             }
             // Otherwise => Condition Not Satisfied❌
-            return false; // ✅ Stop recursion once one valid subsequence is found
+            return false; // ✅ Stop recursion if none valid subsequence is found 
         } 
 
         // Two possibilities : Either Take or Don't Take 
