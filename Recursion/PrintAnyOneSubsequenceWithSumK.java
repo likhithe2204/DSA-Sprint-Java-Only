@@ -1,9 +1,11 @@
 ## Problem: Print any 1 subsequence with sum K
 /**
- * Problem: Print any subsequence with sum K
+ * Problem: Print any 1 subsequence with sum K
  * 
  * Given an array nums and an integer k, print any 1 non-empty subsequence 
  * of nums such that the sum of all elements in the subsequence is equal to k.
+ * 
+ * You must return only one valid subsequence — stop further recursion once one valid match is found.
  * 
  * Constraints:
  * 1 <= nums.length <= 20
@@ -12,16 +14,17 @@
  * 
  * Example 1:
  * Input: nums = [4, 9, 2, 5, 1], k = 10
- * Output: [[9, 1], [4, 5, 1]]
- * Explanation: Valid subsequences are [9, 1] and [4, 5, 1]
+ * Output: [9, 1]
+ * Explanation: Valid subsequences that sum to 10 are [9, 1] and [4, 5, 1], but return any one of them.
  * 
  * Example 2:
  * Input: nums = [4, 2, 10, 5, 1, 3], k = 5
- * Output: [[4, 1], [2, 3], [5]]
+ * Output: [2, 3]
+ * Explanation: Other valid subsequences include [4, 1], [5] — return any one.
  * 
  * Example 3:
  * Input: nums = [1, 10, 4, 5], k = 16
- * Output: [[1, 10, 5]]
+ * Output: [1, 10, 5]
  */
 
 class Solution {
@@ -48,11 +51,11 @@ class Solution {
         if(index == n){
             if(sum == k){
               // Condition Satisfied✅  
-              ans.add(new ArrayList<>(current)); 
-              return true; // you always return true at the end✅
+              ans.add(new ArrayList<>(current)); // ✅ Add the found subsequence
+              return true; // ✅ Stop recursion once one valid subsequence is found
             }
             // Otherwise => Condition Not Satisfied❌
-            return false; // in that case return false at the end✅
+            return false; // ✅ Stop recursion once one valid subsequence is found
         } 
 
         // Two possibilities : Either Take or Don't Take 
