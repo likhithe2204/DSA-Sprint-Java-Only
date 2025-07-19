@@ -57,6 +57,7 @@ class Solution {
         // Take :
         sum += nums[index];
         backtrack(index + 1, sum, cnt, nums, n, k);
+        sum -= nums[index]; // Note * After backtrack also remove the last element added from sum 
         //current.remove(current.size() - 1); ❌ No need cuz we aren'nt storing any intermediate subsequences
     }
 }
