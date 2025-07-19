@@ -61,6 +61,7 @@ class Solution {
         current.add(nums[index]);
         sum += nums[index];
         backtrack(index + 1, current, sum, ans, nums, n, k);
+        sum -= nums[index]; // Note * After backtrack also remove the last element added from sum 
         current.remove(current.size() - 1); // ✅ Backtrack since we're storing the intermediate subsequence
     }
 }
