@@ -41,7 +41,14 @@ class Solution {
 
     // ✅ Recursive helper function
     public int backtrack(int index, int sum, int[] nums, int n, int k){
-        // Base case: 
+
+        // Little Optimizations we can make:
+        
+        // Base case 1 :
+        // Strictly Only applied if array contains only non-negative elements
+        if (sum > k) return 0;
+        
+        // Base case 2: 
         // When ever index equals to the lenght of input array 
         // STOP and check if sum == k
         if(index == n){
