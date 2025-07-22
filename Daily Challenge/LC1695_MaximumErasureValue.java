@@ -90,3 +90,29 @@ class Solution {
         return result;
     }
 }
+
+// Approach 3: Most Optimal Approach
+class Solution {
+    public int maximumUniqueSubarray(int[] nums) {
+        // Most Optimal Approach : {Both time and space} ✅
+
+        int result = 0, currentSum = 0, start = 0;
+        int k = 10001;
+        boolean[] isPresent = new boolean[k];
+
+        for (int end = 0; end < nums.length; end++) {
+            while (isPresent[nums[end]]) {
+                isPresent[nums[start]] = false;
+                currentSum -= nums[start];
+                start++;
+            }
+
+            isPresent[nums[end]] = true;
+            currentSum += nums[end];
+
+            result = Math.max(result, currentSum);
+        }
+
+        return result;
+    }
+}
