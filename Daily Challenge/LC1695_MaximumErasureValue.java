@@ -1,5 +1,5 @@
 // ✅ Leetcode 1695. Maximum Erasure Value
-// ✅ DSA Tracker Style | Brute-Force Approach | TLE for large inputs
+// ✅ Brute-Force Approach | TLE for large inputs
 
 class Solution {
     public int maximumUniqueSubarray(int[] nums) {
