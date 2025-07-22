@@ -30,35 +30,36 @@ Output: 8
 🧠 Space Complexity: O(n)
 */
 
-import java.util.*;
+class Solution {
+    public int maximumUniqueSubarray(int[] nums) {
+        // Brute-Force Approach : TLE
+        // Explore all possible subarrays with unique elements 
+        // and keep a track of sum and max for each subarray✅
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int size = sc.nextInt();
-        int[] arr = new int[size];
-
-        for (int i = 0; i < size; i++) {
-            arr[i] = sc.nextInt();
-        }
-
+        int n = nums.length;
         int max = 0;
 
-        for (int i = 0; i < size; i++) {
-            HashSet<Integer> set = new HashSet<>(); // to store unique elements
-            int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int sum = 0; // Resest for every new i
+            // Ensure that you take a HashSet too ! {* to remove duplicates if any *}
+            HashSet<Integer> set = new HashSet<>();
+            
+            // For every i go through each and every possibile subarray
+            for (int j = i; j < nums.length; j++) {
+                // Ensure there are no duplicates 
+                if (set.contains(nums[j]))
+                    break;
 
-            for (int j = i; j < size; j++) {
-                if (!set.contains(arr[j])) {
-                    set.add(arr[j]); // add unique element
-                    sum += arr[j]; // add value to sum
-                    max = Math.max(max, sum); // update max if greater
-                } else {
-                    break; // if duplicate found, break inner loop
-                }
+                // Otherwise 
+
+                // ✅ Add that new Element into the subarray
+                set.add(nums[j]);
+                // ✅ Keep a track of sum
+                sum += nums[j];
+                // ✅ Also keep a track of max
+                max = Math.max(max, sum);
             }
         }
-
-        System.out.println(max); // print the maximum sum
+        return max;
     }
 }
