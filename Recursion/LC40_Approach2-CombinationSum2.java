@@ -69,6 +69,7 @@ class Solution {
     }
 
     public void Backtrack(int index, int target, List<Integer> current, List<List<Integer>> ans, int[] nums, int n) {
+        
         // Base Case: If target is met, store a copy of the current combination
         if (target == 0) {
             ans.add(new ArrayList<>(current));
@@ -76,21 +77,19 @@ class Solution {
         }
 
         for (int i = index; i < n; i++) {
-            // ✅ Skip duplicates at the same tree level
+
+            // ❌ Not Possible Factors:
+            // 1. 🔴 Skip duplicates at the same tree level
             if (i > index && nums[i] == nums[i - 1])
                 continue;
 
-            // ✅ If the current number exceeds the target, stop exploring this path (pruning)
+            // 2. 🔴 If the current number exceeds the target, stop exploring this path
             if (nums[i] > target)
                 break;
 
-            // ✅ Choose the current number
+            // ✅ Possible Factor:
             current.add(nums[i]);
-
-            // ✅ Explore further with updated target and next index (i + 1 ensures no reuse)
             Backtrack(i + 1, target - nums[i], current, ans, nums, n);
-
-            // ✅ Backtrack: remove the last added number
             current.remove(current.size() - 1);
         }
     }
