@@ -64,46 +64,48 @@ The list must not contain the same combination twice, and the combinations may b
 ```java
 class Solution {
     public List<List<Integer>> combinationSum3(int k, int n) {
-        // Explore all possible paths : at the same time keep a track of sequence & its sum 
-        //      & whenever the summation equals n & its respective sequence size equals k
-        //      That is one of your possible ans ✅
+        // Try and explore all possibilities : 
+        // Recursive Approach : ✅✅✅
 
-        // Recursive Approach : ✅✅✅ 
-
-        int sum = n; // start from the total target given 
+        // To keep a track of sum for each sequence✅
+        int sum = n;
+        // To store the intermediate sequences✅
         List<Integer> current = new ArrayList<>();
+        // To store the final subsequences that equal to sum n with length k✅
         List<List<Integer>> ans = new ArrayList<>();
 
         backtrack(1, sum, current, ans, k, n);
         return ans;
     }
 
-    public void backtrack(int index, int sum, List<Integer> current, List<List<Integer>> ans, int k, int n) {
-        // Base Case : 
-        // Check if condition satisfied?
+    public void backtrack(int index, int sum, List<Integer> current, List<List<Integer>> ans, int k, int target) {
+        // ✅ Base Case:
+        // Whenever you found a sequence that equals target & also sequence length is same a given k. STOP that's one of your possible ans✅
         if (sum == 0 && current.size() == k) {
             ans.add(new ArrayList<>(current));
-            // Otherwise 
             return;
         }
-        // What if summation at any point is < 0 (or) list has exceeded k elements
+
+        // ✅ Edge Case: what if summation at any point becomes -ve OR element within intermediate list has exceeded the length k
+        // Stop the Recursive call then and there!
         if (sum < 0 || current.size() > k)
-            return; // STOP then & there.
+            return;
 
-        // Modified Recursive Logic : Pick all possible combinations by ignoring the duplicates 
-
-        // Which is the element you start from?
-        // If yes => then you start from 1 
-        // Otherwise => start from whatever is the list's last element
+        // ✅ if the sequence is empty start picking from index 1
+        // otherwise, start picking from last element in sequence + 1
         int element = current.isEmpty() ? index : current.get(current.size() - 1) + 1;
 
-        // Explore from (index) itself -> (9) possibilities for each recursive call 
+        // ✅ Pick all possible combinations from i = ele -> 9
+        // Make sure you ignore ths duplicate combinations..
         for (int i = element; i <= 9; i++) {
-            // Pick up only if that number is less than given sum
+            // ✅ Pick up only if that number is less than given sum
             // No point in picking some element that goes beyond the sum  
             if (i <= sum) {
+                // If you pick that specific element, then first add it into the sequence
                 current.add(i);
-                backtrack(i + 1, sum - i, current, ans, k, n);
+                // Then Recursively explore other possibilities by reducing the sum from that specific value
+                backtrack(i + 1, sum - i, current, ans, k, target);
+                // After backtrack make sure, you remove the last element
                 current.remove(current.size() - 1);
             }
         }
