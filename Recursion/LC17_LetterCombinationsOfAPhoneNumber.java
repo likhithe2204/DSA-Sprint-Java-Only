@@ -50,6 +50,12 @@
 ### ✅ Code:
 
 class Solution {
+    /* ✅ Why Private?
+     👉 It protects the keypad mapping from being changed or misused elsewhere in the code.
+       ✅ Why final keyword?
+     It means: “This variable must be assigned only once.” 
+               👉 you can’t reassign map to something else.
+    */
     private final String[] map;
 
     // ✅ Call an constructor : To use the methods inside all over the program
