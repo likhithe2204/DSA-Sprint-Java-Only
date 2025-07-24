@@ -1,4 +1,4 @@
-## 17: Letter Combinations of a Phone Number (Leetcode - Medium)
+## LC17: Letter Combinations of a Phone Number (Leetcode - Medium)
 // ✅ Problem: Letter Combinations of a Phone Number (Leetcode 17)
 // Platform: Leetcode
 // Category: Recursion + Backtracking
