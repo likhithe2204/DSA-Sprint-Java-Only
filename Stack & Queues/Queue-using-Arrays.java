@@ -35,13 +35,9 @@
  */
 
 class ArrayQueue {
-    // Initialize a QueueArray
     public int[] arr;
-    // Total capacity of the QueueArray
     public int size;
-    // To keep a track of size after performing push pop operations
     public int currSize;
-    // Pointers to keep a track and begining and ending of QueueArray
     public int start;
     public int end;
 
@@ -58,64 +54,41 @@ class ArrayQueue {
     }
 
     public void push(int x) {
-       // To push elements into QueueArray, first we need to check is the array empty?
-       if(currSize >= size - 1){
-        System.out.println("Queue is full");
-        return;
-       }
-
-       // Otherwise the queue is empty and we can insert elements 
-
-       // Case i: As of now there is no single element in array 
-       //         Then, move both start, end & insert ele
-       if(currSize == 0){
-        start = start + 1;
-        end = end + 1;
-        
-       }
-
-       // Case ii: Queue already contain some elements in it.
-       //          Then, move end & insert ele 
-       else{
-        end = (end + 1) % size; // move in a Circular rotation manner 
-       }
-
-       // Irresspective of that, always insert element where end is pointing 
-       arr[end] = x;
-       currSize = currSize + 1;
+        if(currSize >= size) {
+            System.out.println("Queue is full");
+            return;
+        }
+        if(currSize == 0) {
+            start = 0;
+            end = 0;
+        } else {
+            end = (end + 1) % size;
+        }
+        arr[end] = x;
+        currSize++;
     }
 
     public int pop() {
-      if(currSize == 0) return -1; // queue is empty 
+        if(currSize == 0) return -1;
 
-      // Otherwise, deal with lot of edge cases:
-      // store ele where start is pointing 
-      int value = arr[start];
+        int value = arr[start];
 
-      // Case i: We are basically destroying the Queue
-      if(currSize == 1){
-        start = -1;
-        end = -1;
-      }
-      // Case ii: QueueArray already contains more than 1 element 
-      else{
-        // move start 
-        start = (start + 1) % size;
-      }
-      // As you are removing one element => remember to shrink the currSize too!
-      currSize = currSize - 1;
-      return value;
+        if(currSize == 1) {
+            start = -1;
+            end = -1;
+        } else {
+            start = (start + 1) % size;
+        }
+        currSize--;
+        return value;
     }
 
     public int peek() {
-        // No elements in the QueueArray
-        if(currSize == 0) return -1; // queue is empty 
-        // Otherwise
+        if(currSize == 0) return -1;
         return arr[start];
     }
 
     public boolean isEmpty() {
-        if(start == -1 && end == -1 || currSize == 0) return true; // Queue is empty 
-        return false; // otheriwse
+        return currSize == 0;
     }
 }
