@@ -5,7 +5,7 @@
  * - push(int x): Pushes element x onto the stack.
  * - pop(): Removes and returns the top element of the stack.
  * - top(): Returns the top element of the stack without removing it.
- * - isEmpty(): Returns true if the stack is empty, false otherwise.
+ * - isEmpty(): Returns true if the stack is empty, false otherwise. 
  *
  * 🔹 Constraints:
  * - 1 <= number of operations <= 100
