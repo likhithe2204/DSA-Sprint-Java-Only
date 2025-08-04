@@ -14,7 +14,7 @@ To simulate a queue (FIFO) using two stacks (LIFO), we can use one stack for ins
 - `empty()`: Return true only if both stacks are empty.
 
 ⏱️ Time Complexity:
-- Push: O(1)
+- Push: O(1) 
 - Pop: Amortized O(1)
 - Peek: Amortized O(1)
 - Empty: O(1)
