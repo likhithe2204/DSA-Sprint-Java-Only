@@ -51,7 +51,7 @@ class Solution {
             if ((ch >= 'A' && ch <= 'Z') ||
                 (ch >= 'a' && ch <= 'z') ||
                 (ch >= '0' && ch <= '9')) {
-                st.push(String.valueOf(ch));
+                st.push(String.valueOf(ch)); // convert char -> string
             }
             // Operator
             else {
