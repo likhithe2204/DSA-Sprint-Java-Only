@@ -4,7 +4,7 @@
 🎯 Difficulty: Medium
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-🧠 Problem Statement:
+🧠 Problem Statement: 
 You are given a valid infix expression consisting of:
  - Operands: single lowercase letters (a–z) or single-digit numbers (0–9)
  - Binary operators: +, -, *, /, ^
