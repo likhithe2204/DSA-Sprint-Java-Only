@@ -6,7 +6,7 @@
 - Category: Arrays / Brute-Force
 - Difficulty: Medium
 ---------------------------------------------------------------------------------------------------------------------------------------
-
+ 
 📝 Problem Statement:
 Given a circular integer array nums, for each element find the Next Greater Element (NGE). 
 The NGE is the first greater element to the right in circular order, else -1.
