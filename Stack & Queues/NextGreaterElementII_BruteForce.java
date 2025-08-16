@@ -1,7 +1,7 @@
 /*
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-🔥 Problem: Next Greater Element II
+🔥 Problem: Next Greater Element II 
 - Platform: LeetCode, Tuf+, GFG, Naukri
 - Category: Arrays / Brute-Force
 - Difficulty: Medium
