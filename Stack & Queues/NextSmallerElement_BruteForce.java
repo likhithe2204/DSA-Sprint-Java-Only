@@ -3,7 +3,7 @@
 
 🔥 Problem: Next Smaller Element  
 Difficulty: Medium  
-Platform: LeetCode / GFG  
+Platform: LeetCode / GFG , Tuf+ 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 📝 Problem Statement:  
