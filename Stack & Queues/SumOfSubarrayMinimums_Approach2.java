@@ -3,7 +3,7 @@
 Difficulty: Medium
 Platform: Coding Ninjas / LeetCode Style
 Category: Monotonic Stack / Subarrays
----------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 
 📌 Problem Statement:
 You are given an array 'arr' of length ‘N’.
@@ -11,7 +11,7 @@ Let ‘X’ be the minimum element of any contiguous subarray of ‘arr’.
 You need to return the sum of 'X' over all the contiguous subarrays of 'arr'.
 Since the answer may be large, return it modulo 10^9+7.
 
----------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 
 🎯 Example 1:
 Input: arr = [1, 2, 3, 4], N = 4
@@ -25,7 +25,7 @@ Output: 14 ✅
 Input: arr = [5, 10, 5, 10], N = 4
 Output: 60 ✅
 
----------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 
 ⚡ Intuition:
 - Each element `arr[i]` is the minimum of several subarrays.
@@ -35,7 +35,7 @@ Output: 60 ✅
 - Contribution of arr[i] = arr[i] × left × right
 - Add all contributions modulo 1e9+7.
 
----------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 
 🛠 Approach (Optimal):
 1. Use monotonic stack to compute PSE (strictly smaller).  
@@ -46,7 +46,7 @@ Output: 60 ✅
 ⏱ Time Complexity: O(N)
 📦 Space Complexity: O(N)
 
----------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 
 🚀 Optimal Code:
 */
