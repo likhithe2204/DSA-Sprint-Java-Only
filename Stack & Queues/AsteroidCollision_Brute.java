@@ -65,15 +65,6 @@ class Solution {
         int n = asteroids.length;
         ArrayList<Integer> ans = new ArrayList<>();
 
-        // edge case : if array contain single element || no elements:
-        if (n == 0) {
-            return converList2Arr(ans);
-        }
-        if (n == 1) {
-            ans.add(asteroids[0]);
-            return converList2Arr(ans);
-        }
-
         // iterate over all asteroids
         for (int i = 0; i < n; i++) {
             int curr = asteroids[i];
