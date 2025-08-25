@@ -49,19 +49,23 @@ We want to remove the middle node. Using **fast & slow pointers**:
 
 class Solution {
     public ListNode deleteMiddle(ListNode head) {
-        if (head == null || head.next == null) return null;
-        
+        // Optimal Approach : 
+        //                      - ✅ Three Pointers.
+
+        if (head == null || head.next == null)
+            return null;
+
+        // Move fast by 2 and slow by 1 until fast reaches end
         ListNode prev = null;
         ListNode slow = head;
         ListNode fast = head;
-        
-        // Move fast by 2 and slow by 1 until fast reaches end
+
         while (fast != null && fast.next != null) {
             prev = slow;
             slow = slow.next;
             fast = fast.next.next;
         }
-        
+
         // Delete middle node
         prev.next = prev.next.next;
         return head;
