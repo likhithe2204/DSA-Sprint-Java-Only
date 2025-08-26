@@ -46,6 +46,7 @@ Then, area = height[i] × (NSE[i] - PSE[i] - 1).
 */
 class Solution {
     public int largestRectangleArea(int[] heights) {
+        // BruteForce Approach✅
         int[] pse = findPSE(heights);
         int[] nse = findNSE(heights);
         int maxi = 0;
