@@ -4,7 +4,7 @@
 💡 Problem: Insertion In A Singly Linked List
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 📝 Statement:
-You are given a Singly Linked List of ‘N’ positive integers.  
+You are given a Singly Linked List of ‘N’ positive integers.   
 Your task is to add a node having the value `VAL` at position `POS` in the linked list.  
 Indexing starts from 0.
 
