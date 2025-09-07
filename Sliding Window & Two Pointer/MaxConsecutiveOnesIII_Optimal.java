@@ -4,7 +4,7 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🚩 Statement:  
 You are given a binary array `nums` and an integer `k`.  
-You can flip at most `k` zeroes to ones.  
+You can flip at most `k` zeroes to ones.   
 Return the **maximum number of consecutive 1's** after performing the flipping operation.  
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
