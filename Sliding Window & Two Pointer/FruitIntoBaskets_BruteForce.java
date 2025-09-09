@@ -5,7 +5,7 @@
 🚩 Statement:  
 You are given an integer array `fruits` where `fruits[i]` represents the type of fruit on the `i`-th tree.  
 You have **2 baskets**, each can hold only one type of fruit but unlimited quantity.  
-Starting from any tree, you must pick exactly one fruit from every tree moving right until you cannot continue.  
+Starting from any tree, you must pick exactly one fruit from every tree moving right until you cannot continue.   
 
 Return the **maximum number of fruits** you can collect.  
 
