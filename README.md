@@ -6,7 +6,7 @@ This repository reflects my consistency, learning mindset, and hands-on problem-
 ---
 
 ## 🚀 Why This Exists
-
+ 
 Solving DSA is not about cramming — it’s about:
 - 💡 Understanding patterns  
 - 🧠 Strengthening logic  
