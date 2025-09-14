@@ -11,7 +11,7 @@ Return the number of nice subarrays.
 Input / Output:
 Example 1:
 Input: nums = [1,1,2,1,1], k = 3  
-Output: 2  
+Output: 2   
 Explanation: The only subarrays with 3 odd numbers are [1,1,2,1] and [1,2,1,1].  
 
 Example 2:
