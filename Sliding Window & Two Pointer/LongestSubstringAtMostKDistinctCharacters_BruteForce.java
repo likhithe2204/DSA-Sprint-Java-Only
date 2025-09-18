@@ -51,7 +51,7 @@ Constraints:
   class Solution {
     public int kDistinctChar(String s, int k) {
         // Brute force approach : Generate all possible substrings ✅
-
+ 
         int n = s.length();
         int maxLen = 0;
 
