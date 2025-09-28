@@ -10,7 +10,7 @@ Return the length of the longest substring containing the same letter you can ge
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 📥 Input/Output:
-
+ 
 Example 1:
 Input: s = "ABAB", k = 2  
 Output: 4  
