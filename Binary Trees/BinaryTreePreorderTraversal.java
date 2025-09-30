@@ -58,9 +58,11 @@ Output: [1]
  *     }
  * }
  */
+
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         // Pre-order traversal : (root left right) ✅
+
         List<Integer> ans = new ArrayList<>();
         preorder(root, ans);
         return ans;
@@ -69,9 +71,9 @@ class Solution {
     public void preorder(TreeNode root, List<Integer> res) {
         if (root == null)
             return;
-        res.add(root.val);
-        preorder(root.left, res);
-        preorder(root.right, res);
+            
+        res.add(root.val); // ✅root
+        preorder(root.left, res); // ✅left 
+        preorder(root.right, res); // ✅right
     }
 }
-
