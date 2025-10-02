@@ -30,7 +30,7 @@ Output: [1]
 - Iterative approach can be done using a stack, but recursion is simplest.  
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-⚙️ Approach:
+⚙️ Recursive Approach:
 1. Start from the root node.  
 2. Recursively traverse the left subtree.  
 3. Add the current node’s value.  
@@ -60,7 +60,7 @@ Output: [1]
  */
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
-        // In-order traversal : (left root right) ✅
+        // Recursive In-order traversal : (left root right) ✅
         List<Integer> ans = new ArrayList<>();
         inorder(root, ans);
         return ans;
