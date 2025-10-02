@@ -61,7 +61,7 @@ Output: [1]
 
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
-        // Pre-order traversal : (root left right) ✅
+        // Recursive Pre-order Traversal : (root left right) ✅
 
         List<Integer> ans = new ArrayList<>();
         preorder(root, ans);
