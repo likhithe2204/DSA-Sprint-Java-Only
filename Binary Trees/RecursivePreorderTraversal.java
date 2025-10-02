@@ -30,7 +30,7 @@ Output: [1]
 - Iterative can be done using a stack, but recursion is simplest for clarity.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-⚙️ Approach:
+⚙️ Recursive Approach:
 1. Start from root.
 2. Add current node’s value to result.
 3. Recurse into left subtree.
