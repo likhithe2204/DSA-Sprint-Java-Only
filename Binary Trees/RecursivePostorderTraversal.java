@@ -30,7 +30,7 @@ Output: [1]
 - Iterative approaches use two stacks or reversed preorder.  
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-⚙️ Approach:
+⚙️ Recursive Approach:
 1. Start from the root node.  
 2. Recursively traverse the left subtree.  
 3. Recursively traverse the right subtree.  
@@ -60,7 +60,7 @@ Output: [1]
  */
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
-        // Post-order Traversal : (left right root) ✅
+        // Recursive Post-order Traversal : (left right root) ✅
         List<Integer> ans = new ArrayList<>();
         postorder(root, ans);
         return ans;
