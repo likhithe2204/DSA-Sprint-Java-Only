@@ -11,7 +11,7 @@ For each step, you may move to an adjacent number of the row below. More formall
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🎯 Input/Output: 
 Example 1:
-Input: triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]  
+Input: triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]   
 Output: 11  
 Explanation: Path = 2 + 3 + 5 + 1 = 11  
 
